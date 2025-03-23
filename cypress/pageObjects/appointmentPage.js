@@ -56,4 +56,20 @@ export class AppointmentPage extends BasePage {
     static facilityCheck() {
         return cy.get("#facility");
     }
+
+    static readmissionCheck() {
+        return cy.get("#hospital_readmission");
+    }
+
+    static programCheck() {
+        return cy.get("#program");
+    }
+
+    static dateCheck() {
+        return cy.get("#visit_date");
+    }
+
+    static commentCheck() {
+        return cy.get("#comment");
+    }
 }

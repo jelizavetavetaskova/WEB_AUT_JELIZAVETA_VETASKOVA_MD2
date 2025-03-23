@@ -20,6 +20,12 @@ describe("Katalon", () => {
             AppointmentPage.background().click();
             AppointmentPage.comment().type("CURA Healthcare Service");
             AppointmentPage.bookAppointment().click();
+
+            AppointmentPage.facilityCheck().should("have.text", "Seoul CURA Healthcare Center");
+            AppointmentPage.readmissionCheck().should("have.text", "Yes");
+            AppointmentPage.programCheck().should("have.text", "Medicaid");
+            AppointmentPage.dateCheck().should("contain", "30/");
+            AppointmentPage.commentCheck().should("have.text", "CURA Healthcare Service")
         })
     })
 })
