@@ -20,4 +20,40 @@ export class AppointmentPage extends BasePage {
     static loginBtn() {
         return cy.get("#btn-login");
     }
+
+    static facility() {
+        return cy.get("#combo_facility");
+    }
+
+    static checkbox() {
+        return cy.get("#chk_hospotal_readmission");
+    }
+
+    static medicaid() {
+        return cy.get("#radio_program_medicaid");
+    }
+
+    static calendar() {
+        return cy.get(".input-group-addon");
+    }
+
+    static days() {
+        return cy.get(".day");
+    }
+
+    static comment() {
+        return cy.get("#txt_comment");
+    }
+
+    static background() {
+        return cy.get("body"); // for clicking to the side to close the calendar widget
+    }
+
+    static bookAppointment() {
+        return cy.get("#btn-book-appointment");
+    }
+
+    static facilityCheck() {
+        return cy.get("#facility");
+    }
 }
