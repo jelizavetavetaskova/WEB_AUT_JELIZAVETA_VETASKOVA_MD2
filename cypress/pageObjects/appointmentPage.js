@@ -72,4 +72,20 @@ export class AppointmentPage extends BasePage {
     static commentCheck() {
         return cy.get("#comment");
     }
+
+    static menu() {
+        return cy.get("#menu-toggle");
+    }
+
+    static sidebar() {
+        return cy.get("#sidebar-wrapper");
+    }
+
+    static history() {
+        return cy.get("#sidebar-wrapper a");
+    }
+
+    static historyEmptyCheck() {
+        return cy.get(".col-sm-12.text-center p");
+    }
 }

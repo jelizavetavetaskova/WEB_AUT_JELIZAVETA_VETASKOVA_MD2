@@ -26,6 +26,18 @@ describe("Katalon", () => {
             AppointmentPage.programCheck().should("have.text", "Medicaid");
             AppointmentPage.dateCheck().should("contain", "30/");
             AppointmentPage.commentCheck().should("have.text", "CURA Healthcare Service")
+        });
+
+        it.only("Appointment history empty", () => {
+            AppointmentPage.makeAppointmentBtn().click();
+            AppointmentPage.userNameField().type("John Doe");
+            AppointmentPage.passwordField().type("ThisIsNotAPassword");
+            AppointmentPage.loginBtn().click();
+
+            AppointmentPage.menu().click();
+            AppointmentPage.sidebar().should("have.class", "active");
+            AppointmentPage.history().contains("History").click();
+            AppointmentPage.historyEmptyCheck().should("have.text", "No appointment.")
         })
     })
 })
